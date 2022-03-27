@@ -124,7 +124,7 @@ let questions = [
   {
     numb: 12,
     question: "15 × 3",
-    answer: "78",
+    answer: "45",
     options: [
       "45",
       "52",
