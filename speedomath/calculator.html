@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<body style="background: linear-gradient(to bottom, #68EACC 0%, #497BE8 100%);" >
+<head>
+<style>
+
+  .input_box{
+  text-align: right;
+  text-decoration: none;
+  display: inline-block;
+  width: 300px;
+  }
+  
+</style>
+<link rel="stylesheet" href= "sidebar.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta5/dist/css/tabler.min.css"> 
+<link rel="stylesheet" href="topnavbar.css">
+</head>
+<div class="topnav">
+  <img src="capture.png" width="273" height="53" align="left">
+ 
+</div>
+
+<div class= "main">
+<center><div class= "card pt-5 mt-5  col-6" style="background-color: aquamarine;">
+
+<h1 style="color:blue; font-family:Arial; font-size: 2em">Calculator</h1>	
+<p>
+<label for="question">Question:</label><br>
+<input class=input_box type="number" id="question"></input><br>
+<label for="question1">(+, -, ×, ÷)</label><br>
+<input class=input_box type="number" id="question1"></input><br><br>
+
+<label for="answer">Answer:</label><br>
+<input class=input_box type="number" id="answer" readonly></input><p>
+
+<BUTTON class="btn btn-success" ONCLICK="add()">Add</BUTTON>
+<BUTTON class="btn btn-primary" ONCLICK="subtract()">Subtract</BUTTON>
+<BUTTON class="btn btn-warning" ONCLICK="multiply()">Multiply</BUTTON>
+<BUTTON class="btn btn-info" ONCLICK="divide()">Divide</BUTTON></center>
+</div>
+</div>
+<script>
+function add()
+{
+no1 = parseInt(document.getElementById("question").value)
+no2 = parseInt(document.getElementById("question1").value)
+subRes1 = parseInt(document.getElementById("answer").value)
+
+subRes1 = no1+no2
+document.getElementById("answer").value =subRes1	
+}
+</script>
+
+<script>
+function subtract()
+{
+no1 = parseInt(document.getElementById("question").value)
+no2 = parseInt(document.getElementById("question1").value)
+subRes2 = parseInt(document.getElementById("answer").value)
+
+subRes2 = no1-no2
+document.getElementById("answer").value =subRes2
+}
+</script>
+
+<script>
+function multiply()
+{
+no1 = parseInt(document.getElementById("question").value)
+no2 = parseInt(document.getElementById("question1").value)
+subRes3 = parseInt(document.getElementById("answer").value)
+
+subRes3 = no1*no2
+document.getElementById("answer").value =subRes3
+}
+</script>
+
+<script>
+function divide()
+{
+no1 = parseInt(document.getElementById("question").value)
+no2 = parseInt(document.getElementById("question1").value)
+subRes4 = parseInt(document.getElementById("answer").value)
+
+subRes4 = no1/no2
+document.getElementById("answer").value =subRes4	
+}
+</script>

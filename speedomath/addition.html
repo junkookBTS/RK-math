@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<body style="background: linear-gradient(to bottom, #68EACC 0%, #497BE8 100%);">
+<head>
+<style>
+
+  .input_box{
+  text-align: right;
+  text-decoration: none;
+  display: inline-block;
+  width: 300px;
+  }
+  
+  
+  
+</style>  
+</style>
+<link rel="stylesheet" href= "sidebar.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta5/dist/css/tabler.min.css">
+<link rel="stylesheet" href="topnavbar.css">
+
+</head>
+
+<div class="topnav">
+	<img src="capture.png" width="273" height="53" align="left">
+ 
+</div>
+<center>
+<div class= "main">
+<div class= "card pt-3 mt-5  col-6" style="background-color: aquamarine;">
+<center>
+
+<h1 style="color:blue; font-family:Arial; font-size: 2em">Addition Quiz</h1>
+
+<label for="question">Question:</label><br>
+<input class=input_box type="number" id="question" size= 1 readonly></input><br>
+
+<label for="question1">+</label><br>
+<input class=input_box type="number" id="question1" size= 1 readonly></input><br><br>
+
+
+<label for="answer">Answer:</label><br>
+<input class=input_box type="number" id="answer" size= 1></input><br><br>
+
+
+<p><BUTTON class="btn btn-success col-5" ONCLICK="q123()">Question</BUTTON></p>
+<p><BUTTON class="btn btn-success col-5" ONCLICK="A123()">Submit</BUTTON></p>
+</div>
+</div>
+
+<script>
+function q123()
+{
+document.getElementById("question").value =
+Math.floor(Math.random() * 1000) ;
+
+document.getElementById("question1").value =
+Math.floor(Math.random() * 100) ;
+}
+function A123()
+{
+no1 = parseInt(document.getElementById("question").value)
+no2 = parseInt(document.getElementById("question1").value)
+subRes = parseInt(document.getElementById("answer").value)
+
+res = no1+no2
+alert("The Correct Answer is")
+alert(res)
+if ( res != subRes)
+	alert("Your Answer is wrong!")
+else 
+	alert("Your Answer is right!")
+answer = document.getElementById("answer").value
+
+document.getElementById("question").value =""
+document.getElementById("question1").value =""
+document.getElementById("answer").value =""
+	
+}
+
+</script>
+</body>
+</html>
+	

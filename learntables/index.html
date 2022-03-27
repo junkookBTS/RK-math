@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://unpkg.com/@tabler/core@1.0.0-beta9/dist/css/tabler.min.css">
+<title>Tabler Generator</title>
+
+<head>
+</head>
+
+<body>
+    <div class="page page-center">
+        <div class="container-tight py-4">
+            <div class="empty card">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7">
+                    <input type="text" class="form-control" placeholder="Enter Number" id="number">
+                    </div>
+                    <div class="col-sm-4 col-md-5">
+                        <div class="btn btn-primary" onclick="addNumbers()">Print Tables</div>                   
+                    </div>
+                    </div>
+                    <center>
+                        <div id="result"></div>
+                    </center>
+            </div>
+        </div>
+    </div>
+        <script>
+            function addNumbers() {
+                var number;
+                var result = "";
+
+                number = Number(document.getElementById("number").value);
+
+                for (var i = 1; i <= 10; i++) {
+                    result = result + "<p class='mt-2'>" + number + " × " + i + " = " + number * i + "</p>";
+                }
+
+                document.getElementById("result").innerHTML = result;
+            }
+        </script>
+        <script src="https://unpkg.com/@tabler/core@1.0.0-beta9/dist/js/tabler.min.js"></script>
+</body>
+
+</html>
